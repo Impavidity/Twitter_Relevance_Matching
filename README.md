@@ -4,7 +4,7 @@
 
 Basically the task is relevance matching task. More specifically is to use neural model to rerank tweets based on the collection retrieved by statistical model such as Query Likelihood.
 
-![Task Overview](pictures/TaskOverview.png)
+![Task Overview](pictures/TaskOverview.png | width=250)
 
 ## Dataset
 
