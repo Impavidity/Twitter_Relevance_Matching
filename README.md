@@ -139,6 +139,13 @@ to get final results.
 
 The **--log_dir** is subject to your training and testing. The name of directory is composed by **model_type**, **gating_source** and **trainig_dataset**. You need to compose this by yourselves.
 
+To get interplolation results, you could run
+
+```
+mkdir interpolation
+python interpolation.py --train_dataset 123 --baseline_eval baseline/run.microblog2014.QL.txt --model_eval attn_ave_123_log/pred.test.ensemble --baseline_data data/run.microblog123.QL.valid.txt --model_data attn_ave_123_log/pred.valid.ensemble --model_use_exp > interpolation/train123.log
+```
+You could get results from **interpolation/train123.log**
 
 That's it.
 
