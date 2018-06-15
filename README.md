@@ -149,8 +149,12 @@ You could get results from **interpolation/train123.log**
 
 That's it.
 
+## System Architecture
 
 
+<img src="pictures/arch.png" width="800" />
+
+TODO: More details on models and experiment results.
 
 
 
