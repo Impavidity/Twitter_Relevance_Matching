@@ -1,0 +1,139 @@
+```
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching python ensemble.py --train_dataset 123 --log_dir eval_qac_ave_123_log
+Test results
+Average MAP 0.40182 P30 0.6108499999999999
+Max MAP 0.4087 0.006879999999999997  P30 0.6339 0.023050000000000126
+Min MAP 0.3941 -0.007720000000000005  P30 0.5939 -0.01694999999999991
+Best results: MAP 0.3962 P30 0.6024
+Ensemble Results
+Ensemble: MAP 0.3309 P30 0.4344
+Ensemble: MAP 0.414 P30 0.6218
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching python ensemble.py --train_dataset 124 --log_dir eval_qac_ave_124_log
+Test results
+Average MAP 0.25954 P30 0.46871
+Max MAP 0.2639 0.0043600000000000305  P30 0.4783 0.009589999999999987
+Min MAP 0.2558 -0.0037399999999999656  P30 0.46 -0.008709999999999996
+Best results: MAP 0.2633 P30 0.47
+Ensemble Results
+Ensemble: MAP 0.3643 P30 0.48
+Ensemble: MAP 0.2688 P30 0.4889
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching python ensemble.py --train_dataset 134 --log_dir eval_qac_ave_134_log
+Test results
+Average MAP 0.16595 P30 0.275
+Max MAP 0.2306 0.06465000000000001  P30 0.3774 0.10239999999999999
+Min MAP 0.1054 -0.06054999999999999  P30 0.1723 -0.10270000000000001
+Best results: MAP 0.2247 P30 0.3689
+Ensemble Results
+Ensemble: MAP 0.3851 P30 0.5444
+Ensemble: MAP 0.2177 P30 0.3599
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching python ensemble.py --train_dataset 234 --log_dir eval_qac_ave_234_log
+Test results
+Average MAP 0.32667999999999997 P30 0.37672999999999995
+Max MAP 0.3418 0.015120000000000022  P30 0.3918 0.015070000000000028
+Min MAP 0.3102 -0.016479999999999995  P30 0.3673 -0.009429999999999938
+Best results: MAP 0.3291 P30 0.3789
+Ensemble Results
+Ensemble: MAP 0.3195 P30 0.5067
+Ensemble: MAP 0.3383 P30 0.3912
+```
+## 2012
+```
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching trec_eval-9.0.5/trec_eval -q data/qrels.txt eval_qac_ave_134_log/pred.test.ensemble > eval_qac_ave_134_log/test.eval
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching perl ../tools/paired-randomization-test-v2.pl -t a  ~/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval
+run1name        run2name        metric  run1score       run2score       pctChange       sigLevel
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_10    0.416949        0.433898        4.065041        0.635750
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_100   0.239322        0.250508        4.674221        0.599230
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_1000  0.058814        0.058814        0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_15    0.392088        0.412434        5.189079        0.484350
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_20    0.359322        0.393220        9.433962        0.256760
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_200   0.173051        0.187288        8.227228        0.316830
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_30    0.331071        0.359886        8.703643        0.281520
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_5     0.440678        0.467797        6.153846        0.520340
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  P_500   0.099559        0.105661        6.128703        0.139370
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  Rprec   0.266607        0.278717        4.542334        0.545880
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  bpref   0.260981        0.267492        2.494496        0.738250
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.00    0.665988        0.683478        2.626147        0.700000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.10    0.453753        0.479664        5.710572        0.458510
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.20    0.383225        0.413290        7.845097        0.339970
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.30    0.300553        0.339814        13.062946       0.194320
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.40    0.249619        0.261171        4.628077        0.686910
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.50    0.211512        0.197353        -6.694339       0.598110
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.60    0.181117        0.138273        -23.655471      0.076800
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.70    0.101459        0.079481        -21.661850      0.168410
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.80    0.041429        0.033741        -18.557460      0.400470
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_0.90    0.006605        0.008580        29.894791       0.063320
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  iprec_at_recall_1.00    0.001031        0.000932        -9.539474       1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  map     0.209108        0.217695        4.106214        0.616600
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  num_rel 106.542373      106.542373      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  num_rel_ret     58.813559       58.813559       0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  num_ret 830.474576      830.474576      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2012.QL.txt.treceval eval_qac_ave_134_log/test.eval  recip_rank      0.581393        0.624259        7.372996        0.440030
+```
+
+## 2013
+```
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching trec_eval-9.0.5/trec_eval -q data/qrels.txt eval_qac_ave_124_log/pred.test.ensemble > eval_qac_ave_124_log/test.eval
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching perl ../tools/paired-randomization-test-v2.pl -t a  ~/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval
+run1name        run2name        metric  run1score       run2score       pctChange       sigLevel
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_10    0.585000        0.570000        -2.564103       0.741550
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_100   0.309833        0.336333        8.552985        0.143340
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_1000  0.071767        0.071767        0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_15    0.538892        0.557773        3.503796        0.602100
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_20    0.504167        0.528333        4.793388        0.467020
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_200   0.225000        0.245000        8.888889        0.056210
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_30    0.445005        0.488892        9.862061        0.139210
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_5     0.640000        0.623333        -2.604167       0.695180
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  P_500   0.125667        0.134800        7.267905        0.016040
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  Rprec   0.299902        0.318397        6.167021        0.244850
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  bpref   0.283875        0.303887        7.049464        0.224840
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.00    0.821812        0.774283        -5.783361       0.211610
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.10    0.613842        0.618498        0.758610        0.898060
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.20    0.500628        0.518462        3.562190        0.638680
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.30    0.368760        0.405583        9.985718        0.165140
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.40    0.275652        0.306873        11.326493       0.131570
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.50    0.202700        0.220748        8.903963        0.283150
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.60    0.156895        0.161872        3.171973        0.780440
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.70    0.096087        0.093573        -2.615694       0.849880
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.80    0.060867        0.042748        -29.767251      0.139230
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_0.90    0.004878        0.001755        -64.024599      1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  iprec_at_recall_1.00    0.004167        0.000498        -88.040000      1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  map     0.253200        0.268787        6.155872        0.294650
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  num_rel 150.183333      150.183333      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  num_rel_ret     71.766667       71.766667       0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  num_ret 769.866667      769.866667      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2013.QL.txt.treceval eval_qac_ave_124_log/test.eval  recip_rank      0.785357        0.726335        -7.515269       0.228880
+```
+
+## 2014
+```
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching trec_eval-9.0.5/trec_eval -q data/qrels.txt eval_qac_ave_123_log/pred.test.ensemble > eval_qac_ave_123_log/test.eval
+(PyTorch_0_4_0) ➜  Twitter_Relevance_Matching perl ../tools/paired-randomization-test-v2.pl -t a  ~/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval
+run1name        run2name        metric  run1score       run2score       pctChange       sigLevel
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_10    0.712727        0.738182        3.571429        0.539600
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_100   0.466909        0.458909        -1.713396       0.685270
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_1000  0.125564        0.125564        0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_15    0.683631        0.704244        3.015184        0.554700
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_20    0.660909        0.672727        1.788171        0.723210
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_200   0.351909        0.362727        3.074141        0.548040
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_30    0.618189        0.621822        0.587640        0.922810
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_5     0.760000        0.760000        0.000000        0.941920
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  P_500   0.219236        0.230036        4.926190        0.028340
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  Rprec   0.435473        0.443138        1.760261        0.665950
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  bpref   0.415196        0.428555        3.217317        0.473670
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.00    0.874645        0.873500        -0.130962       0.959550
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.10    0.758589        0.764535        0.783752        0.844820
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.20    0.653804        0.681835        4.287359        0.292840
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.30    0.577735        0.596535        3.254090        0.559930
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.40    0.490695        0.526718        7.341357        0.202570
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.50    0.400364        0.436295        8.974569        0.224070
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.60    0.296793        0.337389        13.678355       0.047820
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.70    0.206640        0.200705        -2.871925       0.796520
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.80    0.148595        0.146064        -1.703231       0.936680
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_0.90    0.090342        0.090020        -0.356223       0.986290
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  iprec_at_recall_1.00    0.000000        0.000000        0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  map     0.392424        0.413995        5.496842        0.239900
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  num_rel 193.545455      193.545455      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  num_rel_ret     125.563636      125.563636      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  num_ret 755.981818      755.981818      0.000000        1.000000
+/u1/p8shi/../w85yang/baseline/run.microblog2014.QL.txt.treceval eval_qac_ave_123_log/test.eval  recip_rank      0.833753        0.850351        1.990780        0.556670
+```
