@@ -49,6 +49,17 @@ We run four-fold cross-validation test split by year's data (i.e., train on thre
 |40|102|167|217|
 |41|107|168|221|
 
+You could download dataset by running
+
+```
+wget http://ocp59jkku.bkt.clouddn.com/twitter_relevance_matching/data.zip
+unzip data.zip
+```
+
+For fields of dataset (such as train123.comb) is shown as follows (Feature is not discussed in paper)
+```
+Query ID, Sequence ID, Query, Tweet, Label, TimeStamp, Feature
+```
 
 ## Software
 
